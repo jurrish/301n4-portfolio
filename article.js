@@ -13,11 +13,6 @@ Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();//clones the template including html elements and their values(empty) in each instance
 //$newArticle.attr('name', value);
   $newArticle.attr('data-category', this.category);
-  $newArticle.attr('author', this.author);
-  $newArticle.attr('authorUrl', this.authorUrl);
-  $newArticle.attr('publishedOn', this.publishedOn);
-  $newArticle.attr('body', this.body);
-  $newArticle.attr('title', this.title);
 
   $newArticle.find('time[pubdate]').attr('title', this.publishedOn);
   $newArticle.find('authorLine a').text(this.author);
