@@ -1,6 +1,17 @@
 img {
   max-width: 100%;
 }
+
+header {
+  text-align: center;
+  background-image: url();
+  background-color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
 body {
   padding: 2.5em;
   background-color: #e6ffff;
