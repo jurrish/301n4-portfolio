@@ -1,10 +1,14 @@
+html {
+  padding: 1rem;
+}
+
 img {
   max-width: 100%;
 }
 
 header {
   text-align: center;
-  background-image: url();
+  /*background-image: url(); --- add in background image?*/
   background-color: white;
 }
 
@@ -30,8 +34,4 @@ hr {
   margin: 1em;
   width: 80%;
   padding: .25rem .5rem;
-}
-
-.nav-menu {
-  background-color: #e6e6e6;
 }

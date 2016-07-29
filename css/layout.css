@@ -11,19 +11,15 @@
   float: right;
 }
 
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+#links {
+/*style the links <p> tag */
 }
 
-.heading-group-h1 {
-  max-width: 80%;
-}
-
-#filters select {
-  width: 90%;
-  margin: .2em 5%;
+.nav-menu {
+  background-color: transparent;
+  margin: 0;
+  padding: 20px 4px;
+  text-align: center;
 }
 /*throw changes here*/
 @media only screen and (min-width: 640px) {
