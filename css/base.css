@@ -1,5 +1,24 @@
+html {
+  padding: 1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  text-align: center;
+  /*background-image: url(); --- add in background image?*/
+  background-color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
 body {
-  padding: 1em;
+  padding: 2.5em;
+  background-color: #e6ffff;
 }
 
 main {
@@ -14,4 +33,5 @@ address {
 hr {
   margin: 1em;
   width: 80%;
+  padding: .25rem .5rem;
 }
