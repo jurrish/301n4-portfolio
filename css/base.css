@@ -8,6 +8,7 @@ img {
 
 header {
   text-align: center;
+  font-family: sans-serif;
   /*background-image: url(); --- add in background image?*/
   background-color: white;
 }
@@ -19,6 +20,7 @@ ul {
 body {
   padding: 2.5em;
   background-color: #e6ffff;
+  font-family: serif;
 }
 
 main {
