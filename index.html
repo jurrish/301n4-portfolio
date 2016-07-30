@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="css/modules.css">
     <link rel="stylesheet" href="css/layout.css">
     <script id="projectTemplate" type="text/x-handlebars-template">
-      <article class="projectTemplate" data-category="cat">
+      <!-- each instantiation of the object will use "projectTemplate" to recieve a class of "project" -->
+      <article class="project" data-category="cat">
         <!-- probably dont need this data category if not adding one? -->
         <header>
           <h1>{{title}}</h1>
@@ -48,7 +49,7 @@
           </ul>
         <section>
         <section id="projectsHere">
-          <article class="template" data-category="cat">
+          <article class="template" data-category="title">
             <!-- probably dont need this data category if not adding one? -->
             <header>
               <h1>Title</h1>
