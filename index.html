@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="css/modules.css">
     <link rel="stylesheet" href="css/layout.css">
     <script id="projectTemplate" type="text/x-handlebars-template">
-      <article class="template" data-category="cat">
+      <!-- each instantiation of the object will use "projectTemplate" to recieve a class of "project" -->
+      <article class="project" data-category="cat">
         <!-- probably dont need this data category if not adding one? -->
         <header>
           <h1>{{title}}</h1>
-          <div class="dateLine">
+          <div class="infoLine">
             published <time pubdate datetime="2000-01-01">{{publishedOn}}</time>
+            <a href="{{projectUrl}}">{{projectUrl}}</a>
           </div>
         </header>
         <section class="blog-filler">{{body}}</section>
@@ -47,7 +49,7 @@
           </ul>
         <section>
         <section id="projectsHere">
-          <article class="template" data-category="cat">
+          <article class="template" data-category="title">
             <!-- probably dont need this data category if not adding one? -->
             <header>
               <h1>Title</h1>
@@ -66,6 +68,8 @@
 
     <script   src="http://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="misc/marked.js"></script>
+    <script src="misc/highlight.pack.js"></script>
     <script src='scripts/projectData.js' type='text/javascript' ></script>
     <script src='scripts/projectBuild.js' type='text/javascript'></script>
     <script src="scripts/projectView.js" type="text/javascript"></script>
