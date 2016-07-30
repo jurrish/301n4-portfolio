@@ -22,17 +22,17 @@
   text-align: center;
 }
 /*throw changes here*/
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 400px) {
   .heading-group-h1 {
     padding: .1em .1em .1em 2em;
     float: none;
   }
-
+/*resize box or keep as is? which looks better? toggle settings and see the effects*/
   #filters select {
-    width: 15em;
+    width: 25em;
     margin: .2em .2em;
   }
-
+/*li elements look ok, change it up anyways? go to CSStricks and play a bit*/
   #filters li {
     width: 20em;
     display: inline;
