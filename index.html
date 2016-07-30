@@ -3,51 +3,55 @@
   <head>
     <title>Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="vendor/styles/normalize.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/modules.css">
-    <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/layout.css">
-    <!-- <script id="projectTemplate" type="text/x-handlebars-template">
-      <article data-author="{{author}}" data-category={{category}}>
+    <script id="projectTemplate" type="text/x-handlebars-template">
+      <article class="template" data-category="cat">
+        <!-- probably dont need this data category if not adding one? -->
         <header>
           <h1>{{title}}</h1>
-          <div class="byline">
-            by <address><a href="{{authorUrl}}">{{author}}</a></address> published
-            <time pubdate datetime="2000-01-01>">{{publishedOn}}</time>
+          <div class="dateLine">
+            published <time pubdate datetime="2000-01-01">{{publishedOn}}</time>
           </div>
         </header>
-        <section class="article-body">{{{body}}}</section>
-        <a href="#" class="read-on">Read-on</a>
+        <section class="blog-filler">{{body}}</section>
       </article>
-  </script> -->
+    </script>
   </head>
   <body>
     <main>
         <header>
           <h1>
-             Blog du Jurr
+             Projects and Bio
         </header>
         <nav class="nav-menu">
           <div class="icon-menu pull-right">Hamburger Menu Hide@ certain windowsize</div>
           <ul id="links">
-            <p>Helpful Links</p>
+            <p>Helpful Links(make li inline)</p>
             <li><a href="https://www.facebook.com/profile.php?id=10725144" target="_blank" id="facebookLink">Jurr's FaceBook</a></li>
             <li><a href="https://github.com/jurrish/" target="_blank" id="githubLink">Jurr's Github</a></li>
           </ul>
         </nav>
-        <ul id="filters">
-          <li>
-            <select id="project-filter">
-              <option value="">Projects</option>
-            </select>
-          </li>
-        </ul>
+        <section class="bio">
+          <p>Toss in link to ABOUT ME from github?</p>
+          <img src="" alt="" > empty image tag is right here</img>
+        </section>
+        <section class="filterSection">
+          <ul id="filters">
+            <li>
+              <select id="project-filter">
+                <option value="">Projects</option>
+              </select>
+            </li>
+          </ul>
+        <section>
         <section id="projectsHere">
           <article class="template" data-category="cat">
+            <!-- probably dont need this data category if not adding one? -->
             <header>
               <h1>Title</h1>
-              <div class="authorLine">
+              <div class="dateLine">
                 published <time pubdate datetime="2000-01-01">Publish Time</time>
               </div>
             </header>
