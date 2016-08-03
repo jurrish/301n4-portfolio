@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/layout.css">
     <script id="projectTemplate" type="text/x-handlebars-template">
       <!-- each instantiation of the object will use "projectTemplate" to recieve a class of "project" -->
-      <article class="project" data-category="cat">
+      <article class="project" data-category="{{title}}">
         <!-- probably dont need this data category if not adding one? -->
         <header>
           <h1>{{title}}</h1>
@@ -26,14 +26,16 @@
         <header>
           <h1>
              Projects and Bio
+          </h1>
         </header>
         <nav class="nav-menu">
-          <div class="icon-menu pull-right">Hamburger Menu Hide@ certain windowsize</div>
+          <div class="hamburger-menu pull-right">CLICK ME TO SHOW LINKS
           <ul id="links">
             <p>Helpful Links(make li inline)</p>
             <li><a href="https://www.facebook.com/profile.php?id=10725144" target="_blank" id="facebookLink">Jurr's FaceBook</a></li>
             <li><a href="https://github.com/jurrish/" target="_blank" id="githubLink">Jurr's Github</a></li>
           </ul>
+        </div>
         </nav>
         <section class="bio">
           <p>Toss in link to ABOUT ME from github?</p>

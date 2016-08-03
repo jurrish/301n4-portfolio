@@ -5,3 +5,13 @@
 .draft {
   display: none;
 }
+
+@media only screen and (min-width: 640px) {
+  .hamburger-menu {
+    display: none;
+  }
+
+  .nav-menu {
+    display: block;
+  }
+}
