@@ -1,5 +1,7 @@
 var projects = [];
 
+Project.all= [];
+
 function Project (pieces) {
   this.title = pieces.title;
   this.projectUrl = pieces.projectUrl;
@@ -17,6 +19,8 @@ Project.prototype.toHtml = function () {
   return template(this);
   //constructing toHtml prototype with my project key/value pairs
 };
+
+//must turn this into JSON data...
 
 if (typeof projectData !== 'undefined') {
   projectData.sort(function(a,b) {

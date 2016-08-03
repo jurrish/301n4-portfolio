@@ -1,6 +1,7 @@
 .main-nav {
   /*align entire div in center! and add color*/
   text-align: center;
+  display:inline;
 }
 
 .pull-left {
@@ -21,12 +22,7 @@
   padding: 20px 4px;
   text-align: center;
 }
-/*throw changes here*/
-@media only screen and (min-width: 400px) {
-  .heading-group-h1 {
-    padding: .1em .1em .1em 2em;
-    float: none;
-  }
+
 /*resize box or keep as is? which looks better? toggle settings and see the effects*/
   #filters select {
     width: 25em;

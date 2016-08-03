@@ -23,8 +23,16 @@ projectView.filterListener = function () {
 };
 projectView.filterListener();
 
-projectView.collapseBody = function () {
-  console.log($('.blog-filler *:nth-of-type(n+2)'));
-  $('.blog-filler *:nth-of-type(n+2)').hide();
+// projectView.collapseBody = function () {
+//   console.log($('.blog-filler *:nth-of-type(n+2)'));
+//   $('.blog-filler *:nth-of-type(n+2)').hide();
+// };
+// projectView.collapseBody();
+
+projectView.navDisplay = function() {
+  $('.nav-menu').on('click', function(e) {
+    console.log('boop');
+    $('.hamburger-menu ul li').toggle();//create an icon so that it stays visible!!! it works, but it's resizing on click
+  });
 };
-projectView.collapseBody();
+projectView.navDisplay();//not working?? do i need to build out the hamburger menu first?
