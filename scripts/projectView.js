@@ -36,3 +36,10 @@ projectView.navDisplay = function() {
   });
 };
 projectView.navDisplay();//not working?? do i need to build out the hamburger menu first?
+
+projectView.initIndex = function() {
+  Project.all.forEach(function(a) {
+    $('#projectsHere').append(a.toHtml());//for each instantiaton of the project object, i want to append the piece to the projectsHere id inside the index.html
+  });
+};
+projectView.initIndex();
