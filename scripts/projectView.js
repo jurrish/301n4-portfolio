@@ -23,11 +23,11 @@ projectView.filterListener = function () {
 };
 projectView.filterListener();
 
-// projectView.collapseBody = function () {
-//   console.log($('.blog-filler *:nth-of-type(n+2)'));
-//   $('.blog-filler *:nth-of-type(n+2)').hide();
-// };
-// projectView.collapseBody();
+projectView.collapseBody = function () {
+  console.log($('.blog-filler *:nth-of-type(n+2)'));
+  $('.blog-filler *:nth-of-type(n+2)').hide();
+};
+projectView.collapseBody();
 
 projectView.navDisplay = function() {
   $('.nav-menu').on('click', function(e) {
@@ -41,5 +41,6 @@ projectView.initIndex = function() {
   Project.all.forEach(function(a) {
     $('#projectsHere').append(a.toHtml());//for each instantiaton of the project object, i want to append the piece to the projectsHere id inside the index.html
   });
+  projectView.populateFilters();
+  projectView.collapseBody();
 };
-projectView.initIndex();
