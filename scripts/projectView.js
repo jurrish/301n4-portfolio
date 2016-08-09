@@ -27,7 +27,7 @@ projectView.collapseBody = function () {
   console.log($('.blog-filler *:nth-of-type(n+2)'));
   $('.blog-filler *:nth-of-type(n+2)').hide();
 };
-projectView.collapseBody();//edit json files and add <p> tags and escape the <\/p>
+projectView.collapseBody();//edit json files and add <p> tags and escape the <\/p>, or else it have more elements to hide.
 
 projectView.navDisplay = function() {
   $('.nav-menu').on('click', function(e) {
