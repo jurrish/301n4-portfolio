@@ -1,4 +1,5 @@
 //populate filter, work on main-nav hide/show, work on set teaser (hide after 1st 3 lines of ipsum)
+(function(module) {
 var projectView = {};
 
 projectView.populateFilters = function() {
@@ -8,7 +9,7 @@ projectView.populateFilters = function() {
     $('#project-filter').append(optionTag);
   });
 };
-projectView.populateFilters();
+// projectView.populateFilters();
 
 projectView.filterListener = function () {
   $('#project-filter').on('change', function() {
@@ -45,3 +46,5 @@ projectView.initIndex = function() {
   projectView.populateFilters();
   projectView.collapseBody();
 };
+  module.projectView = projectView;
+})(window);
