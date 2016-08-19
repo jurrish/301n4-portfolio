@@ -9,7 +9,7 @@ projectView.populateFilters = function() {
     $('#project-filter').append(optionTag);
   });
 };
-// projectView.populateFilters();
+projectView.populateFilters();
 
 projectView.filterListener = function () {
   $('#project-filter').on('change', function() {
