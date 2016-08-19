@@ -31,6 +31,7 @@ projectView.collapseBody();//edit json files and add <p> tags and escape the <\/
 
 projectView.navDisplay = function() {
   $('.nav-menu').on('click', function(e) {
+    e.preventDefault();
     console.log('boop');
     $('.hamburger-menu ul li').toggle();//create an icon so that it stays visible!!! it works, but it's resizing on click
   });

@@ -45,23 +45,23 @@
   };
   //populate filter, do publishedOn, append + <hr> separation
 
-  Project.fetchAll = function() {
-    if(localStorage.projectData) {
-      var jsonPackage = JSON.parse(localStorage.getItem('projectData'));
-      Project.loadAll(jsonPackage);
-      projectView.initIndex();
-    } else {
-      $.getJSON('../projectData.json', function(data) {
-        console.log(data);
-      }).done(function(data) {
-        console.log(data);
-        Project.loadAll(data);
-        console.log(Project.all);
-        var newJSON = JSON.stringify(data);
-        localStorage.setItem('projectData', newJSON);
-        projectView.initIndex();
-      });
-    };
-  };
+  // Project.fetchAll = function() {
+  //   if(localStorage.projectData) {
+  //     var jsonPackage = JSON.parse(localStorage.getItem('projectData'));
+  //     Project.loadAll(jsonPackage);
+  //     projectView.initIndex();
+  //   } else {
+  //     $.getJSON('../projectData.json', function(data) {
+  //       console.log(data);
+  //     }).done(function(data) {
+  //       console.log(data);
+  //       Project.loadAll(data);
+  //       console.log(Project.all);
+  //       var newJSON = JSON.stringify(data);
+  //       localStorage.setItem('projectData', newJSON);
+  //       projectView.initIndex();
+  //     });
+  //   };
+  // };
   module.Project = Project;
 })(window);
