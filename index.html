@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/modules.css">
     <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/icons.css">
     <script id="projectTemplate" type="text/x-handlebars-template">
       <!-- each instantiation of the object will use "projectTemplate" to recieve a class of "project" -->
       <article class="project" data-category="{{title}}">
@@ -25,17 +26,17 @@
     <main>
         <header>
           <h1>
-             Projects and Bio
+             Projects
           </h1>
         </header>
         <nav class="nav-menu">
-          <div class="hamburger-menu pull-right">CLICK ME TO SHOW LINKS
+          <div class="hamburger-menu pull-right">THIS TEXT IS THE CLICK ICON
           <ul id="links">
             <p>Helpful Links(make li inline)</p>
-            <li class="tab"><a href="/">Home</a></li>
-            <li class="tab"><a href="/about">About Me</a></li>
-            <li class="tab"><a href="https://www.facebook.com/profile.php?id=10725144" target="_blank" id="facebookLink">Jurr's FaceBook</a></li>
-            <li class="tab"><a href="https://github.com/jurrish/" target="_blank" id="githubLink">Jurr's Github</a></li>
+            <li class="tab" class="icon-home"><a href="/">Home</a></li>
+            <li class="tab" class="icon-section"><a href="/about">About Me</a></li>
+            <li class="tab" class="icon-facebook2:before"><a href="https://www.facebook.com/profile.php?id=10725144" target="_blank" id="facebookLink">Jurr's FaceBook</a></li>
+            <li class="tab" class="icon-mark-github"><a href="https://github.com/jurrish/" target="_blank" id="githubLink">Jurr's Github</a></li>
           </ul>
         </div>
         </nav>
@@ -60,7 +61,7 @@
             <section class="blog-filler">Project Ipsum Goes Here</section>
           </article>
         </section>
-        <section id="about" class="bio">
+        <section id="aboutMe" class="bio">
           <h1>A little about me</h1>
           <ul id="list_of_lis">
             <li>something here</li>
@@ -76,15 +77,15 @@
       &copy; Put some stuff here
     </footer>
     <script src="misc/page.js"></script>
-    <script   src="http://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="misc/marked.js"></script>
     <script src="misc/highlight.pack.js"></script>
     <script src="scripts/projectBuild.js" type="text/javascript"></script>
     <script src="scripts/projectView.js" type="text/javascript"></script>
-    <script src="scripts/aboutController.js"></script>
     <script src="scripts/projectsController.js"></script>
-    <script src="server.js" type="text/javascript"></script>
+    <script src="scripts/aboutController.js"></script>
+    <!-- <script src="server.js" type="text/javascript"></script> -->
     <script src="scripts/routes.js"></script>
     <!-- <script>
       Project.fetchAll(); wont need this when i pass control to aboutController

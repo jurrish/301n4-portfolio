@@ -2,9 +2,14 @@
   var aboutController = {};
 
   aboutController.index = function() {
+    // $('section:not(#aboutMe)').hide();
     $('main').hide();
     console.log('aboutController firing');
-    $('#about').fadeIn('fast');
+    // $('.nav-menu').show();
+    // console.log('links id should be showing');
+    $('#aboutMe').show();
+    $('#aboutMe *').show();//WHY NOT working
+    console.log('aboutMe should be showing!');
   };
   module.aboutController = aboutController;
 })(window);
