@@ -34,3 +34,7 @@
     display: inline;
   }
 }
+
+.icon-mark-github:before {
+  content: "\e901";
+}

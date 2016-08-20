@@ -2,20 +2,20 @@
 (function(module) {
   var projectView = {};
 
-projectView.populateFilters = function() {
-  if($('#project-filter option:first').siblings().length === 0) {
-    $('.project').each(function() {
-      var val = $(this).find('h1').text();
-      console.log(val);
-      var optionTag = '<option value="' + val + '">' + val + '</option>';
-      $('#project-filter').append(optionTag);
-      if(('#project-filter option[value"' + val +'"]').length === 0) {
+  projectView.populateFilters = function() {
+    if($('#project-filter option:first').siblings().length === 0) {
+      $('.project').each(function() {
+        var val = $(this).find('h1').text();
+        console.log(val);
+        var optionTag = '<option value="' + val + '">' + val + '</option>';
         $('#project-filter').append(optionTag);
-      };
-    });
-  }
+        if(('#project-filter option[value"' + val +'"]').length === 0) {
+          $('#project-filter').append(optionTag);
+        };
+      });
+    }
 
-};
+  };
 
 projectView.filterListener = function () {
   $('#project-filter').on('change', function() {
@@ -49,6 +49,7 @@ projectView.initIndex = function() {
   Project.all.forEach(function(a) {
     $('#projectsHere').append(a.toHtml());//for each instantiaton of the project object, i want to append the piece to the projectsHere id inside the index.html
   });
+  projectView.filterListener();
   projectView.populateFilters();
   projectView.collapseBody();
 };

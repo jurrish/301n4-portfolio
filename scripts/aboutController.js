@@ -5,6 +5,8 @@
     // $('section:not(#aboutMe)').hide();
     $('main').hide();
     console.log('aboutController firing');
+    // $('.nav-menu').show();
+    // console.log('links id should be showing');
     $('#aboutMe').show();
     $('#aboutMe *').show();//WHY NOT working
     console.log('aboutMe should be showing!');
