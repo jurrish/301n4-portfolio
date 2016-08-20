@@ -1,15 +1,17 @@
 //populate filter, work on main-nav hide/show, work on set teaser (hide after 1st 3 lines of ipsum)
 (function(module) {
-var projectView = {};
+  var projectView = {};
 
 projectView.populateFilters = function() {
   $('.project').each(function() {
     var val = $(this).find('h1').text();
     var optionTag = '<option value="' + val + '">' + val + '</option>';
-    $('#project-filter').append(optionTag);
+    // $('#project-filter').append(optionTag);
+    if(('#project-filter option[value"' + val +'"]').length === 0) {
+      $('#project-filter').append(optionTag);
+    };
   });
 };
-projectView.populateFilters();
 
 projectView.filterListener = function () {
   $('#project-filter').on('change', function() {
@@ -30,14 +32,14 @@ projectView.collapseBody = function () {
 };
 projectView.collapseBody();//edit json files and add <p> tags and escape the <\/p>, or else it have more elements to hide.
 
-projectView.navDisplay = function() {
-  $('.nav-menu').on('click', function(e) {
-    e.preventDefault();
-    console.log('boop');
-    $('.hamburger-menu ul li').toggle();//create an icon so that it stays visible!!! it works, but it's resizing on click
-  });
-};
-projectView.navDisplay();//not working?? do i need to build out the hamburger menu first?
+// projectView.navDisplay = function() {
+//   $('.nav-menu').on('click', function(e) {
+//     e.preventDefault();
+//     console.log('boop');
+//     $('.hamburger-menu ul li').toggle();//create an icon so that it stays visible!!! it works, but it's resizing on click
+//   });
+// };
+// projectView.navDisplay();//not working?? do i need to build out the hamburger menu first?
 
 projectView.initIndex = function() {
   Project.all.forEach(function(a) {

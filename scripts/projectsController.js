@@ -3,7 +3,7 @@
 
   projectsController.index = function() {
     console.log('projectsController firing');
-    Project.fetchAll(projectView.initIndex);
+    Project.fetchAll();
   };
   module.projectsController = projectsController;
 })(window);
