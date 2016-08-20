@@ -3,7 +3,7 @@
 
   aboutController.index = function() {
     // $('section:not(#aboutMe)').hide();
-    $('main').hide();
+    $('section').hide();
     console.log('aboutController firing');
     // $('.nav-menu').show();
     // console.log('links id should be showing');
