@@ -3,14 +3,18 @@
   var projectView = {};
 
 projectView.populateFilters = function() {
-  $('.project').each(function() {
-    var val = $(this).find('h1').text();
-    var optionTag = '<option value="' + val + '">' + val + '</option>';
-    // $('#project-filter').append(optionTag);
-    if(('#project-filter option[value"' + val +'"]').length === 0) {
+  if($('#project-filter option:first').siblings().length === 0) {
+    $('.project').each(function() {
+      var val = $(this).find('h1').text();
+      console.log(val);
+      var optionTag = '<option value="' + val + '">' + val + '</option>';
       $('#project-filter').append(optionTag);
-    };
-  });
+      if(('#project-filter option[value"' + val +'"]').length === 0) {
+        $('#project-filter').append(optionTag);
+      };
+    });
+  }
+
 };
 
 projectView.filterListener = function () {
