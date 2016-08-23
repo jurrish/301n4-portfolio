@@ -8,7 +8,7 @@
 
   Project.all = [];
 
-  Project.prototype.toHtml = function () {
+  Project.prototype.toHtml = function() {
     var template = Handlebars.compile($('#projectTemplate').text());
 
     this.timeFrame = parseInt((new Date() - new Date(this.publishedOn)) / 60/ 60 / 24 / 1000);
@@ -39,14 +39,16 @@
     jsonData.sort(function(a,b) {
       return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
     });
-    jsonData.forEach(function(pieces) {
-      Project.all.push(new Project(pieces));
-    });
+    if (!Project.all.length) {
+      jsonData.forEach(function(pieces) {
+        Project.all.push(new Project(pieces));
+      });
+    };
   };
   //populate filter, do publishedOn, append + <hr> separation
 
   Project.fetchAll = function() {
-    if(localStorage.projectData) {
+    if (localStorage.projectData) {
       var jsonPackage = JSON.parse(localStorage.getItem('projectData'));
       Project.loadAll(jsonPackage);
       projectView.initIndex();

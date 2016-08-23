@@ -17,24 +17,24 @@
 
   };
 
-projectView.filterListener = function () {
-  $('#project-filter').on('change', function() {
-    if($(this).val()) {
-      $('.project').hide();
-      $('[data-category="' + $(this).val() + '"]').fadeIn('slow');
-    } else {
-      $('.project').fadeIn('slow');
-      $('project.template').hide();
-    };
-  });
-};
-projectView.filterListener();
+  projectView.filterListener = function () {
+    $('#project-filter').on('change', function() {
+      if($(this).val()) {
+        $('.project').hide();
+        $('[data-category="' + $(this).val() + '"]').fadeIn('slow');
+      } else {
+        $('.project').fadeIn('slow');
+        $('project.template').hide();
+      };
+    });
+  };
+  projectView.filterListener();
 
-projectView.collapseBody = function () {
-  console.log($('.blog-filler *:nth-of-type(n+2)'));
-  $('.blog-filler *:nth-of-type(n+2)').hide();
-};
-projectView.collapseBody();//edit json files and add <p> tags and escape the <\/p>, or else it have more elements to hide.
+  projectView.collapseBody = function () {
+    console.log($('.blog-filler *:nth-of-type(n+2)'));
+    $('.blog-filler *:nth-of-type(n+2)').hide();
+  };
+  projectView.collapseBody();//edit json files and add <p> tags and escape the <\/p>, or else it have more elements to hide.
 
 // projectView.navDisplay = function() {
 //   $('.nav-menu').on('click', function(e) {
@@ -45,13 +45,15 @@ projectView.collapseBody();//edit json files and add <p> tags and escape the <\/
 // };
 // projectView.navDisplay();//not working?? do i need to build out the hamburger menu first?
 
-projectView.initIndex = function() {
-  Project.all.forEach(function(a) {
-    $('#projectsHere').append(a.toHtml());//for each instantiaton of the project object, i want to append the piece to the projectsHere id inside the index.html
-  });
-  projectView.filterListener();
-  projectView.populateFilters();
-  projectView.collapseBody();
-};
+  projectView.initIndex = function() {
+    console.log('boop');
+    $('#projectsHere').empty();
+    Project.all.forEach(function(a) {
+      $('#projectsHere').append(a.toHtml());//for each instantiaton of the project object, i want to append the piece to the projectsHere id inside the index.html
+    });
+    // projectView.filterListener();
+    projectView.populateFilters();
+    projectView.collapseBody();
+  };
   module.projectView = projectView;
 })(window);
