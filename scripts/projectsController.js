@@ -2,7 +2,9 @@
   var projectsController = {};
 
   projectsController.index = function() {
-    console.log('projectsController firing');
+    $('section').hide();
+    $('#projectsHere').empty();
+    $('#projectsHere').show();
     Project.fetchAll();
   };
   module.projectsController = projectsController;
