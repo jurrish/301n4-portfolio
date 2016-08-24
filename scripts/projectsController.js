@@ -7,5 +7,6 @@
     $('#projectsHere').show();
     Project.fetchAll();
   };
+  //lol boop
   module.projectsController = projectsController;
 })(window);
