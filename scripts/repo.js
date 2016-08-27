@@ -7,7 +7,7 @@
       url: 'https://api.github.com/user/repos?sort=updated&per_page=10',
       type: 'GET',
       headers: {
-        Authorization: 'token ' + githubToken
+        Authorization: 'token ' + GITHUB_TOKEN
       }
     }).done(function(data) {
       console.log(data);
