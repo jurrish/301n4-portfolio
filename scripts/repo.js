@@ -4,7 +4,7 @@
 
   repos.requestRepos = function(callback) {
     $.ajax({
-      url: 'https://api.github.com/user/repos?sort=updated&per_page=10',
+      url: '/github/user/jurrish/repos?sort=updated&per_page=10',
       type: 'GET',
       headers: {
         Authorization: 'token ' + process.env.GITHUB_TOKEN
