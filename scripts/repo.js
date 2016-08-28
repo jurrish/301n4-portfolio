@@ -7,7 +7,7 @@
       url: '/github/user/jurrish/repos?sort=updated&per_page=10',
       type: 'GET',
       headers: {
-        Authorization: 'token ' + process.env.GITHUB_TOKEN
+        Authorization: 'token ' + GITHUB_TOKEN
       }
     }).done(function(data) {
       console.log(data);
