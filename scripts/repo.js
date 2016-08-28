@@ -7,7 +7,7 @@
 //$.get/GET doesn't require those options.
   repos.requestRepos = function(callback) {
     $.ajax({
-      url: '/github/user/jurrish/repos?sort=updated&per_page=10',
+      url: '/github/users/jurrish/repos?sort=updated&per_page=10',
       type: 'GET'
       //-----------------------------
       // headers: {
