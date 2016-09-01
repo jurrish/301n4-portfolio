@@ -4,9 +4,13 @@ html {
 
 header {
   text-align: center;
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
   /*background-image: url(); --- add in background image?*/
   background-color: white;
+}
+
+span {
+  font-family: 'Lato', sans-serif;
 }
 
 ul {
@@ -20,8 +24,12 @@ body {
 }
 
 main {
+  font-family: 'Lato', sans-serif;
+  color: grey;
   margin: auto;
   width: 80%;
+  background-image: url(/Users/JR/cf/301/301portfolio/301n4-portfolio/css/pictures/167088_1600_1200.jpg);
+  background-size: 100% 100%;
 }
 
 address {
